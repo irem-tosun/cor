@@ -16,6 +16,7 @@ import Observation
         try await loginService.login(with: LoginRequest())
         
         if let request = loginService.pendingCartRequest {
+            print(" ⛓ Rebuilding the chain")
             let chain = CartFlowChainBuilder(
                 loginService: loginService,
                 cartService: cartService
