@@ -10,7 +10,6 @@ import Observation
 
 @Observable final class LoginViewModel {
     var resultText: String?
-    var handlerChain: (any CartHandler)?
     
     func login(loginService: LoginService, cartService: CartService) async throws {
         try await loginService.login(with: LoginRequest())
